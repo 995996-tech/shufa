@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>书法入门一张图 · 笔 · 墨 · 纸 · 砚 · 帖</title>
+<meta name="description" content="给书法初学者的脑图式学习文档：毛笔分类、篆隶楷行草演变与碑帖推荐、墨汁墨条与砚台用法、宣纸生熟区别与适用场景，附 7 天 / 30 天练习计划。">
+<meta name="theme-color" content="#efe9dd">
+<style>
+  :root{
+    --paper:#efe9dd;
+    --paper-2:#fbf7ee;
+    --paper-3:#f6f0e4;
+    --ink:#1d1a16;
+    --ink-2:#4a4337;
+    --ink-3:#8c806c;
+    --line:#ddd2bd;
+    --line-2:#e6dcc9;
+    --cinnabar:#b23a2f;
+    --serif:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC","SimSun",serif;
+    --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #faf6ec 0%, rgba(250,246,236,0) 60%),
+      radial-gradient(900px 500px at 100% 10%, #f3ecdc 0%, rgba(243,236,220,0) 55%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:15px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:1180px;margin:0 auto;padding:0 28px 90px}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:60px 0 34px;position:relative}
+  .hero-top{display:flex;align-items:flex-start;justify-content:space-between}
+  .eyebrow{font-size:11px;letter-spacing:.32em;color:var(--ink-3);text-transform:uppercase}
+  .brand{
+    position:absolute;top:50px;right:0;
+    background:#141210;
+    padding:12px 11px 10px;
+    border-radius:3px;
+    box-shadow:0 12px 26px -16px rgba(0,0,0,.85);
+    line-height:0;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .brand img{display:block;height:132px;width:auto}
+  .brand::after{
+    content:"";position:absolute;inset:5px;border:1px solid rgba(255,255,255,.13);
+    border-radius:2px;pointer-events:none;
+  }
+  .hero h1{
+    font-family:var(--serif);font-weight:600;font-size:46px;line-height:1.22;
+    letter-spacing:.1em;margin:20px 0 14px;
+  }
+  .hero h1 em{font-style:normal;color:var(--cinnabar)}
+  .lede{font-size:15px;color:var(--ink-2);margin:0;max-width:44em}
+  .lede br{display:block}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .meta span{
+    font-size:12px;color:#6b5f4b;background:#f7f1e4;
+    border:1px solid var(--line);border-radius:99px;padding:4px 12px;
+  }
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:30;
+    background:rgba(239,233,221,.9);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-top:1px solid rgba(29,26,22,.1);
+    border-bottom:1px solid rgba(29,26,22,.1);
+    margin-bottom:10px;
+  }
+  .nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:10px 0;overflow-x:auto;scrollbar-width:none}
+  .nav ul::-webkit-scrollbar{display:none}
+  .nav a{
+    display:block;white-space:nowrap;text-decoration:none;color:#5d5241;
+    font-size:13px;padding:5px 13px;border-radius:99px;transition:.2s;
+  }
+  .nav a:hover{background:#e7ddc8;color:var(--ink)}
+  .nav a.active{background:var(--ink);color:var(--paper)}
+  .nav a.print{margin-left:auto;border:1px solid var(--line);color:var(--ink-3);cursor:pointer}
+  .nav a.print:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .progress{position:fixed;left:0;top:0;height:2px;width:0;background:var(--cinnabar);z-index:60;transition:width .08s linear}
+
+  /* ---------- Mind map ---------- */
+  .map-card{
+    background:linear-gradient(180deg,#fcf8ef,#f7f1e5);
+    border:1px solid var(--line);border-radius:18px;
+    padding:34px 30px;margin-top:22px;
+    box-shadow:0 18px 40px -30px rgba(70,52,28,.55);
+  }
+  .map{display:flex;align-items:center;gap:48px}
+  .map-root{flex:0 0 194px;position:relative}
+  .root-node{
+    background:var(--ink);color:#f7f2e6;border-radius:14px;
+    padding:24px 16px 22px;text-align:center;position:relative;
+    box-shadow:0 14px 30px -20px rgba(0,0,0,.8);
+  }
+  .root-node::before{
+    content:"";position:absolute;inset:7px;border:1px solid rgba(247,242,230,.28);
+    border-radius:9px;pointer-events:none;
+  }
+  .root-kicker{font-size:9.5px;letter-spacing:.34em;color:#c9bda5}
+  .root-node strong{
+    display:block;font-family:var(--serif);font-size:27px;
+    letter-spacing:.16em;margin:9px 0 6px;font-weight:600;
+  }
+  .root-sub{font-size:11px;color:#b6a98f;letter-spacing:.12em}
+  .root-node::after{
+    content:"";position:absolute;right:-24px;top:50%;width:24px;height:1px;background:#c9bda5;
+  }
+
+  .map-branches{flex:1;display:grid;gap:14px;min-width:0}
+  .branch{
+    --c:#8a6a45;
+    position:relative;background:#fffdf8;
+    border:1px solid #e4dac6;border-left:3px solid var(--c);
+    border-radius:12px;padding:16px 18px 14px;
+    cursor:pointer;transition:border-color .2s,box-shadow .2s;
+  }
+  .branch:hover{border-color:#cbb994;box-shadow:0 10px 24px -20px rgba(60,45,25,.65)}
+  .branch:focus-visible{outline:2px solid var(--cinnabar);outline-offset:3px}
+  .branch::after{
+    content:"";position:absolute;left:-24px;top:0;bottom:-15px;width:1px;background:#cdc0a6;
+  }
+  .branch:first-child::after{top:38px}
+  .branch:last-child::after{bottom:auto;height:38px}
+  .branch::before{
+    content:"";position:absolute;left:-24px;top:38px;width:24px;height:1px;background:#cdc0a6;
+  }
+  .branch header{display:flex;align-items:center;gap:10px;height:44px}
+  .branch header i{
+    font-style:normal;font-family:var(--serif);font-size:11px;color:#fff;
+    background:var(--c);width:22px;height:22px;border-radius:50%;
+    display:grid;place-items:center;flex:0 0 22px;
+  }
+  .branch header h3{
+    margin:0;font-family:var(--serif);font-size:17.5px;font-weight:600;letter-spacing:.08em;
+  }
+  .branch header span{margin-left:auto;font-size:11px;color:#a1947e;letter-spacing:.04em}
+  .leaves{
+    list-style:none;margin:10px 0 0;padding:0;
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px;
+  }
+  .leaves li{
+    display:flex;align-items:baseline;gap:8px;
+    font-size:13px;color:#57503f;padding:5px 0;
+    border-top:1px dashed #eee6d6;
+  }
+  .leaves li::before{content:"·";color:var(--c);font-weight:700;line-height:1}
+  .leaves b{font-weight:600;color:var(--ink);white-space:nowrap;font-size:13px}
+  .leaves span{flex:1;min-width:0}
+
+  .b1{--c:#9a6b3f}
+  .b2{--c:#3d5a52}
+  .b3{--c:#45566b}
+  .b4{--c:#8d7a2f}
+
+  /* ---------- Sections ---------- */
+  .sec{margin-top:60px;scroll-margin-top:72px}
+  .sec-head{
+    display:flex;align-items:flex-end;gap:14px;
+    border-bottom:1px solid #d8cbb2;padding-bottom:12px;margin-bottom:22px;
+  }
+  .sec-head .num{font-family:var(--serif);font-size:38px;line-height:.85;color:#c9b99b}
+  .sec-head h2{margin:0;font-family:var(--serif);font-size:26px;letter-spacing:.08em;font-weight:600}
+  .sec-head .en{margin-left:auto;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:#a89a80;padding-bottom:5px}
+  .sec-note{font-size:14px;color:var(--ink-2);margin:-8px 0 20px;max-width:52em}
+
+  .panel{background:var(--paper-2);border:1px solid var(--line-2);border-radius:14px;padding:22px 24px}
+  .panel h4{
+    margin:0 0 12px;font-family:var(--serif);font-size:16px;letter-spacing:.06em;
+    display:flex;align-items:center;gap:8px;font-weight:600;
+  }
+  .panel h4::before{content:"";width:3px;height:14px;background:var(--cinnabar);border-radius:2px}
+  .panel p{margin:0 0 10px;font-size:13.5px;color:#514939}
+  .panel p:last-child{margin-bottom:0}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+  /* table */
+  .table-wrap{border:1px solid var(--line-2);border-radius:12px;overflow:hidden;background:var(--paper-2)}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{
+    text-align:left;font-weight:600;background:#f0e7d6;color:#4c4231;
+    padding:10px 14px;font-size:12.5px;letter-spacing:.04em;
+    border-bottom:1px solid #e0d4bf;
+  }
+  td{padding:10px 14px;border-bottom:1px solid #eee4d1;color:#4e4636;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td b{color:var(--ink);font-weight:600}
+  td .soft{color:#8f846f;font-size:12px}
+
+  /* four virtues / badges */
+  .four{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+  .four div{
+    background:#fffdf7;border:1px solid #e6dcc8;border-radius:10px;
+    padding:14px 10px;text-align:center;
+  }
+  .four strong{display:block;font-family:var(--serif);font-size:24px;line-height:1.2}
+  .four small{color:#8f846f;font-size:11.5px;letter-spacing:.04em}
+
+  ol.steps{counter-reset:s;list-style:none;margin:0;padding:0}
+  ol.steps li{counter-increment:s;position:relative;padding:0 0 15px 32px;font-size:13.5px;color:#514939}
+  ol.steps li:last-child{padding-bottom:0}
+  ol.steps li::before{
+    content:counter(s);position:absolute;left:0;top:1px;width:21px;height:21px;border-radius:50%;
+    background:#efe5d1;color:#7a6a4f;font-size:11.5px;font-weight:600;
+    display:grid;place-items:center;
+  }
+  ol.steps b{display:block;color:var(--ink);font-weight:600;margin-bottom:1px}
+
+  .tip{
+    margin-top:14px;padding:11px 14px;border-radius:9px;
+    background:#f6eede;border-left:3px solid var(--cinnabar);
+    font-size:12.5px;color:#6a5c46;
+  }
+  .tip b{color:var(--cinnabar);font-weight:600}
+
+  /* timeline */
+  .timeline{position:relative;padding-left:34px;margin-top:26px}
+  .timeline::before{content:"";position:absolute;left:13px;top:12px;bottom:16px;width:1px;background:#d3c6ab}
+  .tl{position:relative;padding-bottom:26px}
+  .tl:last-child{padding-bottom:0}
+  .tl::before{
+    content:"";position:absolute;left:-26px;top:8px;width:9px;height:9px;border-radius:50%;
+    background:var(--cinnabar);box-shadow:0 0 0 3px var(--paper);
+  }
+  .tl-era{
+    display:inline-block;font-size:11px;letter-spacing:.1em;color:#8a7c64;
+    background:#efe6d4;border-radius:4px;padding:1px 8px;margin-bottom:5px;
+  }
+  .tl h3{
+    margin:0 0 3px;font-family:var(--serif);font-size:19px;letter-spacing:.06em;font-weight:600;
+  }
+  .tl h3 small{font-family:var(--sans);font-size:11.5px;font-weight:400;color:#9b8f79;letter-spacing:.02em;margin-left:8px}
+  .tl p{margin:0;font-size:13.5px;color:#514939}
+  .works{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+  .works span{
+    font-size:12px;background:#fffdf7;border:1px solid #e2d7c2;
+    padding:3px 9px;border-radius:99px;color:#6b5f4b;
+  }
+  .works span b{color:var(--ink);font-weight:600}
+  .works span.hot{border-color:#d9a79f;background:#fbf0ec;color:#9c4a3d}
+
+  .route{
+    display:flex;flex-wrap:wrap;align-items:center;gap:6px;
+    background:#fffdf7;border:1px solid #e6dcc8;border-radius:10px;padding:12px 16px;margin-top:16px;
+  }
+  .route span{font-size:12.5px;color:#5c5140}
+  .route i{font-style:normal;color:#b9ab90;margin:0 2px}
+  .route b{font-weight:600;color:var(--cinnabar)}
+
+  /* ink tones */
+  .ink-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+  .sw{border-radius:10px;padding:16px 12px 13px;border:1px solid rgba(0,0,0,.06)}
+  .sw strong{display:block;font-family:var(--serif);font-size:19px;letter-spacing:.12em}
+  .sw small{display:block;font-size:11px;opacity:.75;line-height:1.5;margin-top:2px}
+
+  /* paper cards */
+  .paper-card{position:relative;background:#fffdf7;border:1px solid #e3d9c5;border-radius:13px;padding:20px 20px 18px}
+  .paper-card.rec{border-color:#c9b78f;box-shadow:0 0 0 2px #f0e6d0 inset}
+  .paper-card h3{margin:0 0 2px;font-family:var(--serif);font-size:20px;letter-spacing:.06em;font-weight:600}
+  .paper-card .sub{font-size:11.5px;color:#9b8f79;letter-spacing:.06em}
+  .paper-card .tag{
+    position:absolute;right:14px;top:14px;font-size:10.5px;letter-spacing:.08em;
+    background:#3d5a52;color:#f3eee2;border-radius:99px;padding:2px 9px;
+  }
+  .kv{margin:14px 0 0;padding:0;list-style:none;font-size:13px}
+  .kv li{display:flex;gap:10px;padding:5px 0;border-top:1px dashed #eee5d4}
+  .kv li:first-child{border-top:none}
+  .kv li em{font-style:normal;color:#9b8f79;flex:0 0 44px;font-size:12px}
+  .kv li span{flex:1;color:#4e4636}
+  .meter{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;color:#8c806c}
+  .dots{display:flex;gap:4px}
+  .dots i{width:7px;height:7px;border-radius:50%;background:#e2d6c0}
+  .dots i.on{background:var(--cinnabar)}
+
+  /* pitfalls */
+  .pits{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .pit{background:var(--paper-2);border:1px solid var(--line-2);border-radius:11px;padding:14px 16px;display:flex;gap:12px}
+  .pit .x{
+    flex:0 0 22px;height:22px;border-radius:50%;background:#f3e2dc;color:#b23a2f;
+    display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:2px;
+  }
+  .pit b{display:block;font-size:13.5px;font-weight:600;margin-bottom:1px}
+  .pit span{font-size:12.5px;color:#6a5f4c;display:block;line-height:1.65}
+
+  /* ---------- 练习计划 ---------- */
+  .plan-sub{
+    margin:28px 0 12px;font-family:var(--serif);font-size:18px;
+    letter-spacing:.06em;font-weight:600;display:flex;align-items:center;gap:10px;
+  }
+  .plan-sub::before{content:"";width:16px;height:1px;background:var(--cinnabar)}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .week{
+    background:#fffdf7;border:1px solid #e3d9c5;border-top:3px solid var(--cinnabar);
+    border-radius:12px;padding:16px 16px 14px;display:flex;flex-direction:column;
+  }
+  .week:nth-child(2){border-top-color:#9a6b3f}
+  .week:nth-child(3){border-top-color:#3d5a52}
+  .week:nth-child(4){border-top-color:#45566b}
+  .week .wk{font-size:10px;letter-spacing:.24em;color:#a1937c}
+  .week h3{margin:5px 0 7px;font-family:var(--serif);font-size:17px;letter-spacing:.04em;font-weight:600}
+  .week p{margin:0;font-size:12.5px;color:#5c5242;line-height:1.7}
+  .week .goal{margin-top:auto;padding-top:10px;font-size:12px;color:#8a7c64}
+  .week .goal b{color:var(--cinnabar);font-weight:600}
+
+  .daybar{
+    display:flex;height:38px;border:1px solid #e3d9c5;border-radius:9px;
+    overflow:hidden;font-size:11.5px;color:#4e4636;
+  }
+  .daybar div{display:grid;place-items:center;background:#fbf6ea;padding:0 4px;text-align:center}
+  .daybar div+div{border-left:1px solid #e3d9c5}
+  .daybar .b1{flex:5}
+  .daybar .b2{flex:5;background:#f6efdf}
+  .daybar .b3{flex:15;background:#efe4cf;font-weight:600}
+  .daybar .b4{flex:5;background:#f6efdf}
+
+  .check30{display:grid;grid-template-columns:repeat(15,minmax(0,1fr));gap:6px;margin-top:14px}
+  .day{position:relative;display:block;cursor:pointer}
+  .day input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+  .day span{
+    display:grid;place-items:center;height:38px;border:1px solid #e0d5c0;
+    border-radius:7px;background:#fffdf7;font-size:11px;color:#a1937c;
+    transition:border-color .15s,color .15s;
+  }
+  .day:hover span{border-color:#c9b78f}
+  .day input:checked + span{background:#3d5a52;border-color:#3d5a52;color:#f7f2e6;font-weight:600}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:11.5px;color:#9b8f79}
+  .legend i{font-style:normal;display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px;vertical-align:1px}
+
+  footer{
+    margin-top:64px;padding-top:20px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    font-size:11.5px;color:#9b8f79;letter-spacing:.04em;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:980px){
+    .map{flex-direction:column;align-items:stretch;gap:22px}
+    .map-root{flex:none;display:flex;justify-content:center}
+    .root-node{min-width:220px}
+    .root-node::after{display:none}
+    .branch::before,.branch::after{display:none}
+    .grid3{grid-template-columns:1fr}
+    .grid4{grid-template-columns:repeat(2,1fr)}
+    .check30{grid-template-columns:repeat(10,minmax(0,1fr))}
+    .leaves{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:720px){
+    .page{padding:0 16px 60px}
+    .hero{padding:38px 0 24px}
+    .hero h1{font-size:32px;letter-spacing:.06em}
+    .brand{top:30px;padding:9px 8px 7px}
+    .brand img{height:86px}
+    .brand::after{inset:4px}
+    .leaves{grid-template-columns:1fr}
+    .grid2,.pits{grid-template-columns:1fr}
+    .grid4{grid-template-columns:1fr}
+    .check30{grid-template-columns:repeat(6,1fr)}
+    .daybar{font-size:10.5px}
+    .four{grid-template-columns:repeat(2,1fr)}
+    .ink-scale{grid-template-columns:1fr 1fr;gap:8px}
+    .map-card{padding:20px 16px}
+    .sec-head .en{display:none}
+    .sec-head h2{font-size:22px}
+    .sec-head .num{font-size:30px}
+    .works span{font-size:11.5px}
+  }
+
+  /* ---------- Print ---------- */
+  @media print{
+    @page{size:A4;margin:13mm 13mm 15mm}
+    html{scroll-behavior:auto}
+    body{background:#fff !important;font-size:9.8pt;line-height:1.62}
+    .nav,.progress{display:none}
+    .page{max-width:none;padding:0}
+    .brand{top:0;padding:5px 5px 4px;box-shadow:none;border-radius:2px}
+    .brand img{height:64px}
+    .brand::after{inset:3px}
+
+    .hero{padding:0 0 6mm;break-after:avoid}
+    .hero h1{font-size:30pt;margin:4mm 0 3mm}
+    .lede{font-size:10pt}
+    .meta{margin-top:4mm}
+    .meta span{font-size:8pt;padding:2px 8px}
+
+    .map-card{padding:5mm;margin-top:0;break-inside:avoid;box-shadow:none}
+    .map{display:block}
+    .map-root{display:flex;justify-content:center;margin-bottom:4mm}
+    .root-node{min-width:170px;padding:5mm 8mm}
+    .root-node strong{font-size:19pt;margin:1mm 0}
+    .root-node::after{display:none}
+    .map-branches{display:grid;grid-template-columns:1fr 1fr;gap:3.5mm}
+    .branch{padding:2.5mm 3mm;break-inside:avoid}
+    .branch::before,.branch::after{display:none}
+    .branch header{height:24px;gap:6px}
+    .branch header i{width:16px;height:16px;flex-basis:16px;font-size:7pt}
+    .branch header h3{font-size:11pt}
+    .branch header span{font-size:7pt}
+    .leaves{grid-template-columns:1fr;gap:0;margin-top:3px}
+    .leaves li{font-size:7.8pt;padding:2px 0}
+    .leaves b{font-size:7.8pt}
+
+    .sec{margin-top:8mm;break-before:auto}
+    .sec-head{padding-bottom:2mm;margin-bottom:4mm;break-after:avoid}
+    .sec-head .num{font-size:26pt}
+    .sec-head h2{font-size:17pt}
+    .sec-head .en{font-size:7pt}
+    .sec-note{font-size:9.5pt;margin:-2mm 0 3mm;break-after:avoid;break-inside:avoid}
+    .table-wrap thead{display:table-header-group}
+
+    .panel,.paper-card,.pit,.week{break-inside:avoid;box-shadow:none;padding:3mm 3.5mm}
+    .panel h4{font-size:10.5pt;margin-bottom:1.5mm}
+    .panel p{font-size:9pt}
+    .grid2,.grid3,.grid4{gap:2.5mm}
+    .grid2{grid-template-columns:1fr 1fr}
+    .grid3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid4{grid-template-columns:1fr 1fr}
+    .table-wrap{break-inside:auto;box-shadow:none}
+    table{font-size:8.6pt}
+    th{padding:1.8mm 2.4mm;font-size:8.2pt}
+    td{padding:1.7mm 2.4mm}
+    tr{break-inside:avoid}
+    .four{gap:2mm}
+    .four div{padding:2mm 1mm}
+    .four strong{font-size:16pt}
+    .four small{font-size:7.5pt}
+    .tip{font-size:8.5pt;padding:2.2mm 2.8mm;margin-top:2mm}
+    ol.steps li{padding:0 0 2.2mm 6mm;font-size:8.6pt}
+    ol.steps li::before{width:4.2mm;height:4.2mm;font-size:7pt;top:0}
+    ol.steps b{font-size:8.8pt;margin-bottom:0}
+
+    .timeline{padding-left:8mm;margin-top:2mm}
+    .timeline::before{left:3mm;top:3mm;bottom:3mm}
+    .tl{padding-bottom:4.5mm;break-inside:avoid}
+    .tl::before{left:-6.4mm;top:2mm;width:2.6mm;height:2.6mm;box-shadow:0 0 0 1.6mm #fff}
+    .tl-era{font-size:7.5pt;padding:0.5mm 2mm}
+    .tl h3{font-size:12pt}
+    .tl h3 small{font-size:8pt}
+    .tl p{font-size:9pt}
+    .works{gap:1.2mm;margin-top:1.5mm}
+    .works span{font-size:7.8pt;padding:1mm 2.2mm}
+    .route{padding:2.5mm 3mm;margin-top:2.5mm;break-inside:avoid}
+    .route span{font-size:8.2pt}
+
+    .ink-scale{gap:1.5mm;margin-top:1.5mm}
+    .sw{padding:2mm 2mm;break-inside:avoid}
+    .sw strong{font-size:12.5pt}
+    .sw small{font-size:6.6pt;line-height:1.4}
+    #paper .grid3{break-inside:avoid}
+    .paper-card h3{font-size:15pt}
+    .paper-card .sub{font-size:7.5pt}
+    .paper-card .tag{font-size:7pt;right:3mm;top:3mm}
+    .kv{margin-top:2mm}
+    .kv li{font-size:8.5pt;padding:1.4mm 0}
+    .kv li em{font-size:7.8pt}
+    .meter{font-size:7.8pt}
+    .pits{gap:2.5mm}
+    .pit{padding:3mm 3.5mm}
+    .pit b{font-size:9.5pt}
+    .pit span{font-size:8.5pt}
+
+    .plan-sub{font-size:12pt;margin:3mm 0 2mm;break-after:avoid}
+    .week{padding:3mm}
+    .week h3{font-size:11pt}
+    .week p,.week .goal{font-size:8pt}
+    .daybar{height:10mm;font-size:7.5pt}
+    .check30{gap:1.5mm;margin-top:3mm}
+    .day span{height:8mm;font-size:7.5pt}
+    .legend{font-size:7.5pt;gap:3mm;margin-top:2mm}
+
+    a{color:inherit;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="page">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="hero-top">
+      <span class="eyebrow">Calligraphy · 初学者手册</span>
+      <div class="brand"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAAHgCAYAAAB+aiXRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABzGVYSWZNTQAqAAAACAABh2kABAAAAAEAAAAaAAAAAAAEkoYABwAAAXsAAABQoAEAAwAAAAEAAQAAoAIABAAAAAEAAACIoAMABAAAAAEAAAHgAAAAAEFTQ0lJAAAAeyJzb3VyY2VfdHlwZSI6ImRvdXlpbl9iZWF1dHlfbWUiLCJkYXRhIjp7ImFwcHZlcnNpb24iOiIxNS42LjAiLCJwcm9kdWN0IjoicmV0b3VjaCIsImFjdGl2aXR5TmFtZSI6IiIsImNhcGFiaWxpdHlfa2V5IjpbInBvcnRyYWl0Il0sImVmZmVjdF90eXBlIjoidG9vbCIsInBsYXlJZCI6IiIsInBpY3R1cmVJZCI6IkRCODk0RDYwLUZEQTEtNDA3Mi04RkRCLTlCNDA1M0Q2RTZFOCIsImZpbHRlcklkIjoiIiwiaW5mb1N0aWNrZXJJZCI6IiIsIm9zIjoiaW9zIiwiY2FwYWJpbGl0eV9leHRyYV92MiI6e30sInN0aWNrZXJJZCI6IiIsImVudGVyX2Zyb20iOiJlbnRlcl9sYXVuY2giLCJpbWFnZUVmZmVjdElkIjoiIiwiZWZmZWN0X2lkIjoicG9ydHJhaXQifX0AkfKE/QAAA0BpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDYuMC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+MjkxMjwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlBpeGVsWERp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" alt="乌与墨"></div>
+    </div>
+    <h1>书法入门<em>一张图</em></h1>
+    <p class="lede">笔、字、墨、纸，先把这四件事看明白，再动手。<br>从选一支不别扭的笔，到铺开第一张不洇的纸。</p>
+    <div class="meta">
+      <span>4 大板块</span>
+      <span>7 段字体演变</span>
+      <span>每体 3 本碑帖</span>
+      <span>30 天练习计划</span>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="#map">脑图总览</a></li>
+      <li><a href="#brush">毛笔</a></li>
+      <li><a href="#script">字体与碑帖</a></li>
+      <li><a href="#ink">墨与砚</a></li>
+      <li><a href="#paper">宣纸</a></li>
+      <li><a href="#plan">练习计划</a></li>
+      <li><a href="#pit">避坑清单</a></li>
+      <li><a class="print" href="#" onclick="window.print();return false;">打印 / 存 PDF</a></li>
+    </ul>
+  </nav>
+
+  <!-- ================= MIND MAP ================= -->
+  <section id="map" class="map-card">
+    <div class="map">
+      <div class="map-root">
+        <div class="root-node">
+          <span class="root-kicker">BEGINNER</span>
+          <strong>书法入门</strong>
+          <span class="root-sub">笔 · 墨 · 纸 · 砚 · 帖</span>
+        </div>
+      </div>
+
+      <div class="map-branches">
+        <article class="branch b1" data-target="#brush" tabindex="0" role="link" aria-label="跳到毛笔分类详解">
+          <header><i>01</i><h3>毛笔分类</h3><span>软硬 · 大小 · 形制</span></header>
+          <ul class="leaves">
+            <li><b>羊毫</b><span>软毫，蓄墨多，篆隶大字</span></li>
+            <li><b>狼毫</b><span>硬毫，弹性好，行书小楷</span></li>
+            <li><b>兼毫</b><span>刚柔相济，入门首选</span></li>
+            <li><b>紫毫</b><span>极硬锐利，小楷勾线</span></li>
+            <li><b>大小</b><span>小楷 / 中楷 / 大楷 / 斗笔</span></li>
+            <li><b>四德</b><span>尖 · 齐 · 圆 · 健</span></li>
+            <li><b>开笔</b><span>温水泡开，不用嘴咬</span></li>
+            <li><b>养笔</b><span>洗净顺毛，悬挂晾干</span></li>
+          </ul>
+        </article>
+
+        <article class="branch b2" data-target="#script" tabindex="0" role="link" aria-label="跳到字体与碑帖详解">
+          <header><i>02</i><h3>字体与碑帖</h3><span>篆 · 隶 · 楷 · 行 · 草</span></header>
+          <ul class="leaves">
+            <li><b>篆书</b><span>线条匀圆，练中锋最好</span></li>
+            <li><b>隶书</b><span>蚕头燕尾，一波三折</span></li>
+            <li><b>楷书</b><span>立结构，打基础</span></li>
+            <li><b>行书</b><span>求连贯，日常最实用</span></li>
+            <li><b>草书</b><span>先识草法，最后再学</span></li>
+            <li><b>顺序</b><span>篆 → 隶 → 楷 → 行 → 草</span></li>
+            <li><b>选帖</b><span>原碑拓本，字口清晰</span></li>
+            <li><b>方法</b><span>先读帖，再对临、背临</span></li>
+          </ul>
+        </article>
+
+        <article class="branch b3" data-target="#ink" tabindex="0" role="link" aria-label="跳到墨与砚详解">
+          <header><i>03</i><h3>墨与砚</h3><span>用墨 · 磨墨 · 砚台</span></header>
+          <ul class="leaves">
+            <li><b>墨汁</b><span>一得阁 · 曹素功 · 玄宗</span></li>
+            <li><b>用法</b><span>倒出兑水，剩墨不回瓶</span></li>
+            <li><b>墨条</b><span>松烟偏冷，油烟黑亮</span></li>
+            <li><b>磨墨</b><span>重按轻推，顺时针画圈</span></li>
+            <li><b>砚台</b><span>端砚细腻，歙砚下墨快</span></li>
+            <li><b>墨碟</b><span>只用墨汁，瓷碟更好洗</span></li>
+            <li><b>墨色</b><span>焦 · 浓 · 重 · 淡 · 清</span></li>
+            <li><b>洗砚</b><span>现磨现用，不留宿墨</span></li>
+          </ul>
+        </article>
+
+        <article class="branch b4" data-target="#paper" tabindex="0" role="link" aria-label="跳到宣纸详解">
+          <header><i>04</i><h3>宣纸生熟</h3><span>吸墨 · 规格 · 用途</span></header>
+          <ul class="leaves">
+            <li><b>生宣</b><span>洇墨强，行草写意</span></li>
+            <li><b>熟宣</b><span>不洇墨，小楷工笔</span></li>
+            <li><b>半生熟</b><span>微洇，新手最全能</span></li>
+            <li><b>规格</b><span>三尺 · 四尺 · 斗方 · 条幅</span></li>
+            <li><b>厚薄</b><span>单宣 · 夹宣 · 特净皮</span></li>
+            <li><b>练习</b><span>毛边纸最划算</span></li>
+            <li><b>正反</b><span>光滑一面为正面</span></li>
+            <li><b>匹配</b><span>生宣宜浓，熟宣宜淡</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 01 BRUSH ================= -->
+  <section id="brush" class="sec">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2>毛笔：先看毫，再看大小</h2>
+      <span class="en">The Brush</span>
+    </div>
+    <p class="sec-note">毛笔的分类主要看三件事：<b>用什么毛（软硬）</b>、<b>写多大的字（出锋长短）</b>、<b>什么形制（长锋、提斗）</b>。新手最容易在“软硬”上踩坑。</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th style="width:92px">类型</th><th style="width:120px">原料</th><th style="width:76px">弹性</th><th>特点</th><th style="width:200px">适合写</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>羊毫</b></td><td>山羊毛</td><td>软 ★☆☆</td><td>蓄墨多、出水慢，线条圆厚饱满，但提按反应慢、不好控制</td><td>篆书、隶书、大字、写意；练中锋线条</td></tr>
+          <tr><td><b>狼毫</b></td><td>黄鼠狼尾毛</td><td>硬 ★★★</td><td>锋颖锐利、弹性好、出水快，转折干净</td><td>行书、小楷、瘦金、工笔勾线</td></tr>
+          <tr><td><b>紫毫</b></td><td>野兔背脊毛</td><td>极硬 ★★★★</td><td>挺健锐利，价格偏高，耐磨性一般</td><td>小楷、精细勾线，老手偏爱</td></tr>
+          <tr><td><b>兼毫</b></td><td>羊毫＋狼毫 / 兔毫</td><td>中 ★★☆</td><td>刚柔相济，好上手；常见“七紫三羊”“三紫七羊”“白云”</td><td><b>楷书入门首选</b>，楷行隶都能用</td></tr>
+          <tr><td><b>鸡毫</b></td><td>鸡绒毛</td><td>极软 ☆</td><td>极软难控，墨韵特殊，产量少</td><td>写意、特殊效果，不建议入门</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid2" style="margin-top:18px">
+      <div class="panel">
+        <h4>按大小选：看“出锋”</h4>
+        <p>出锋指笔锋从笔肚到笔尖的长度，决定能写多大的字。字越大，笔越大，手腕也要越悬。</p>
+        <div class="table-wrap" style="margin-top:10px">
+          <table>
+            <thead><tr><th>型号</th><th>出锋</th><th>适合字径</th></tr></thead>
+            <tbody>
+              <tr><td><b>小楷</b></td><td>1.3–2 cm</td><td>1–3 cm</td></tr>
+              <tr><td><b>中楷</b></td><td>2.5–3.5 cm</td><td>3–8 cm</td></tr>
+              <tr><td><b>大楷</b></td><td>3.5–5 cm</td><td>8–15 cm</td></tr>
+              <tr><td><b>斗笔 / 提斗</b></td><td>6–12 cm</td><td>30 cm 以上榜书</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tip"><b>提醒：</b>小笔写大字会把笔按散、写坏笔；大笔写小字则控制不住。宁可笔略大，不要笔太小。</div>
+      </div>
+
+      <div class="panel">
+        <h4>好笔四德：尖 · 齐 · 圆 · 健</h4>
+        <div class="four">
+          <div><strong>尖</strong><small>锋颖尖锐<br>聚锋不散</small></div>
+          <div><strong>齐</strong><small>润开压平<br>锋毛齐整</small></div>
+          <div><strong>圆</strong><small>笔肚圆润<br>四面发力匀</small></div>
+          <div><strong>健</strong><small>按压回弹<br>有腰力</small></div>
+        </div>
+        <h4 style="margin-top:20px">新手三支笔就够</h4>
+        <ul class="kv">
+          <li><em>主力</em><span>兼毫中楷一支（白云系列），楷隶行都能练</span></li>
+          <li><em>大字</em><span>兼毫或羊毫大楷一支，写 10 cm 以上的字</span></li>
+          <li><em>小字</em><span>狼毫或兼毫小楷一支，练落款、抄经</span></li>
+        </ul>
+        <div class="tip"><b>价格参考：</b>入门单支 30–80 元已经很好用，不必上来就买几百元的“名笔”。</div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:18px">
+      <h4>开笔与养笔：一支笔能用三年还是三个月，全在这里</h4>
+      <div class="grid2">
+        <ol class="steps">
+          <li><b>温水开笔</b>30℃ 左右温水泡 3–5 分钟，让胶化开，轻轻捻散笔毛，不要用嘴咬、不要用开水烫。</li>
+          <li><b>顺着毛洗</b>每次写完在清水里顺锋轻摆，把根部的墨洗出来，不要用力搓。</li>
+          <li><b>吸干定型</b>用纸巾吸去水分，把笔锋顺成尖，悬挂晾干或平放。</li>
+        </ol>
+        <ol class="steps" start="4" style="counter-reset:s 3">
+          <li><b>不要盖帽久放</b>湿笔盖帽会闷臭、掉毛；干透后再收进笔帘。</li>
+          <li><b>不要长期泡水</b>笔杆会开裂、笔根脱胶。</li>
+          <li><b>轮换使用</b>两三支笔轮着写，让笔毛有恢复时间，寿命更长。</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 02 SCRIPT ================= -->
+  <section id="script" class="sec">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2>字体与碑帖：篆隶楷行草，一体三帖</h2>
+      <span class="en">Scripts &amp; Stele</span>
+    </div>
+    <p class="sec-note">汉字从“画出来”到“写出来”，顺序是：<b>甲骨 → 金文（大篆）→ 小篆 → 隶书 → 草书 / 楷书 → 行书</b>。隶书是分水岭，之前是古文字，之后是今文字。每种字体精选 3 本，<span style="color:#b23a2f">红色</span>为入门首推。</p>
+
+    <div class="timeline">
+      <article class="tl">
+        <span class="tl-era">商代晚期 · 约前 1300—前 1046</span>
+        <h3>甲骨文 <small>刻在龟甲兽骨上的最早成体系文字</small></h3>
+        <p>刀刻而成，线条瘦硬方折，象形味重，大小错落。它是汉字的源头，但工具与笔法都和毛笔书写差别很大。</p>
+        <div class="works">
+          <span><b>《甲骨文合集》</b> 资料总集</span>
+          <span><b>《殷墟书契菁华》</b> 拓本精选</span>
+          <span><b>《祭祀狩猎涂朱牛骨刻辞》</b> 朱书墨书</span>
+        </div>
+      </article>
+
+      <article class="tl">
+        <span class="tl-era">西周—战国</span>
+        <h3>金文 / 大篆 <small>铸刻在青铜器上的文字</small></h3>
+        <p>笔画圆浑厚重，结体自由宽博，有铸造的厚重感。学篆书可以先看金文养眼界，再落到小篆练手。秦《石鼓文》是由大篆向小篆过渡的关键，可作延伸。</p>
+        <div class="works">
+          <span class="hot"><b>《大盂鼎》</b> 雄浑</span>
+          <span><b>《毛公鼎》</b> 整饬</span>
+          <span><b>《散氏盘》</b> 奇崛</span>
+        </div>
+      </article>
+
+      <article class="tl">
+        <span class="tl-era">秦 · 前 221 年后</span>
+        <h3>小篆 <small>“书同文”的标准字体</small></h3>
+        <p>李斯等人整理，字形长方、结构匀称、线条圆转等粗，全用中锋。它是练“中锋行笔”和“线条稳定”的最好字体，也是零基础最友好的起点之一。</p>
+        <div class="works">
+          <span class="hot"><b>《峄山碑》</b> 入门首选</span>
+          <span><b>《泰山刻石》</b> 秦篆原貌</span>
+          <span>清 · <b>邓石如《白氏草堂记》</b> 篆书笔意</span>
+        </div>
+      </article>
+
+      <article class="tl">
+        <span class="tl-era">汉 · 前 202—220</span>
+        <h3>隶书 <small>由篆到楷的桥梁</small></h3>
+        <p>把篆书的圆转改成方折，出现“蚕头燕尾”“一波三折”，字形变扁方。隶书既有法度又不死板，是新手建立“提按”意识的好选择。喜欢瘦硬可看《礼器碑》，喜欢放纵可看《石门颂》。</p>
+        <div class="works">
+          <span class="hot"><b>《曹全碑》</b> 秀逸圆润，入门首选</span>
+          <span><b>《乙瑛碑》</b> 端庄规整</span>
+          <span><b>《张迁碑》</b> 方拙古厚</span>
+        </div>
+      </article>
+
+      <article class="tl">
+        <span class="tl-era">汉—唐</span>
+        <h3>草书 <small>章草 → 今草 → 狂草</small></h3>
+        <p>为求快写而产生。章草字字独立、带隶意（可看皇象《急就章》）；今草连绵；狂草彻底解放。草书有严格的“草法”，不是随便连笔，零基础不建议直接上手。</p>
+        <div class="works">
+          <span class="hot"><b>《十七帖》</b> 今草 · 王羲之</span>
+          <span><b>《书谱》</b> 孙过庭 · 草法+理论</span>
+          <span><b>《自叙帖》</b> 狂草 · 怀素</span>
+        </div>
+      </article>
+
+      <article class="tl">
+        <span class="tl-era">汉末—唐</span>
+        <h3>楷书 <small>结构与法度的主战场</small></h3>
+        <p>笔画独立、结构端正，是练“结体”的核心字体。魏碑方峻雄强，唐楷严谨规范，入门一般从唐楷或魏碑里选一路。喜欢骨力可看柳公权《玄秘塔碑》，喜欢流美可看赵孟頫《胆巴碑》。</p>
+        <div class="works">
+          <span class="hot"><b>《颜勤礼碑》</b> 宽博厚实，最易上手</span>
+          <span><b>《九成宫醴泉铭》</b> 欧阳询 · 严谨</span>
+          <span><b>《张猛龙碑》</b> 魏碑 · 方峻</span>
+        </div>
+      </article>
+
+      <article class="tl">
+        <span class="tl-era">东晋—宋</span>
+        <h3>行书 <small>楷书的“流动版”，最实用</small></h3>
+        <p>介于楷草之间，笔画有连带、字形仍可辨认，日常书写和创作都用得上。建议在楷书有一定结构基础后再学。之后可再看苏轼《黄州寒食帖》、米芾《蜀素帖》，体会墨色与节奏。</p>
+        <div class="works">
+          <span class="hot"><b>《集王圣教序》</b> 学王字最佳范本</span>
+          <span><b>《兰亭序》</b> 天下第一行书</span>
+          <span><b>《祭侄文稿》</b> 颜真卿 · 第二行书</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="panel" style="margin-top:26px">
+      <h4>学习顺序怎么排？两条常见路线</h4>
+      <div class="route">
+        <b>路线 A · 打线条</b><i>→</i><span>篆书《峄山碑》1–2 个月</span><i>→</i><span>隶书《曹全碑》2–3 个月</span><i>→</i><span>楷书《颜勤礼碑》半年</span><i>→</i><span>行书《圣教序》</span>
+      </div>
+      <div class="route">
+        <b>路线 B · 立结构</b><i>→</i><span>楷书《颜勤礼碑》或《九成宫》半年</span><i>→</i><span>隶书《乙瑛碑》补笔法</span><i>→</i><span>行书《兰亭序》</span>
+      </div>
+      <p style="margin-top:14px;font-size:13px;color:#6a5f4c">两条路都对。差别是：A 先解决“笔能不能走稳”，B 先解决“字能不能站住”。上班族时间少，建议 B；想系统打基础、能每天练，选 A。</p>
+    </div>
+
+    <div class="panel" style="margin-top:18px">
+      <h4>选帖三原则 + 一句劝</h4>
+      <div class="grid3">
+        <div>
+          <p><b>① 用原碑拓本</b><br>优先选高清影印本（文物出版社《历代碑帖法书选》、上海书画出版社、二玄社），避开过度修图的“美术字帖”。</p>
+        </div>
+        <div>
+          <p><b>② 字口要清晰</b><br>模糊、残损太多的拓本，新手看不出笔法走向，容易越写越猜。</p>
+        </div>
+        <div>
+          <p><b>③ 自己要喜欢</b><br>临一本不喜欢的帖，很难坚持。喜欢，才有反复看的耐心。</p>
+        </div>
+      </div>
+      <div class="tip"><b>一句劝：</b>不要一上来就临个性极强的字（金农漆书、郑板桥六分半、徐渭狂草）。先把共性规律练到手，个性是以后自然长出来的。</div>
+    </div>
+
+    <div class="panel" style="margin-top:18px">
+      <h4>临帖四步：从“像”到“会”</h4>
+      <div class="grid2">
+        <p><b>① 读帖</b><br>下笔前先看一分钟：主笔是哪一笔、重心在哪、空间怎么分。看不出来就先别写。</p>
+        <p><b>② 对临</b><br>看一笔写一笔，位置、长短、角度尽量还原。写完一个字，立刻和原帖并排对照。</p>
+        <p><b>③ 背临</b><br>合上帖默写一遍，再打开对照，专门找记忆偏差的地方，那才是真正没学会的。</p>
+        <p><b>④ 意临</b><br>抓住特征自由写，是进阶的事。初学阶段少做，容易把毛病当成风格。</p>
+      </div>
+      <div class="tip"><b>每天只解决一个问题：</b>今天专看“横”，明天专看“重心”。问题越具体，进步越快。</div>
+    </div>
+  </section>
+
+  <!-- ================= 03 INK ================= -->
+  <section id="ink" class="sec">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2>墨与砚：墨汁图省事，墨条练心性</h2>
+      <span class="en">Ink &amp; Inkstone</span>
+    </div>
+    <p class="sec-note">日常练习用墨汁完全够；想体会墨色层次、写作品，可以备一条墨和一方小砚。关键不是贵，而是<b>浓度调对、砚台选对</b>。</p>
+
+    <div class="grid2">
+      <div class="panel">
+        <h4>墨汁：开瓶就能写</h4>
+        <p><b>常见品牌：</b>一得阁（北京，胶偏重、浓黑，必须兑水）、曹素功（上海，墨色偏暖）、玄宗（日本，超浓细腻、气味小）、红星、胡开文。</p>
+        <ol class="steps" style="margin-top:12px">
+          <li><b>倒出来用</b>倒在砚台或小碟里，不要拿笔直接伸进瓶里蘸——会把水和杂质带进整瓶。</li>
+          <li><b>兑水调浓度</b>一般加 10%–30% 的水。标准是“笔尖挂墨不滴、行笔不滞、纸上不洇成团”。</li>
+          <li><b>现倒现用</b>墨汁静置会沉淀、脱胶。剩墨不要倒回瓶里，倒掉或留着洗笔。</li>
+          <li><b>写完洗砚</b>不留宿墨，干了的墨会结块、伤砚台也伤笔。</li>
+        </ol>
+        <div class="tip"><b>太浓滞笔、太淡无神。</b>写楷隶可稍浓，写行草可稍淡；生宣要浓一点，熟宣可淡一点。</div>
+      </div>
+
+      <div class="panel">
+        <h4>墨条：慢下来的那部分</h4>
+        <p><b>松烟墨</b>黑中偏冷、哑光，适合小楷、淡墨、工笔；<b>油烟墨</b>黑亮、层次丰富，适合行草、大字；<b>漆烟墨</b>更黑更亮，价格高。</p>
+        <ol class="steps" style="margin-top:12px">
+          <li><b>滴少量清水</b>砚堂里放一小勺水，宁少勿多，磨浓了再补。</li>
+          <li><b>重按轻推</b>墨条垂直，顺时针画圈，力度均匀、速度别快。古话说“磨墨如病夫”。</li>
+          <li><b>磨到挂砚</b>约 5–10 分钟，墨汁浓稠、表面油亮、闻起来有墨香即可。</li>
+          <li><b>擦干收起</b>墨条不能立在砚里泡着，会粘砚、开裂。</li>
+        </ol>
+        <div class="tip"><b>磨墨的好处：</b>胶轻不滞笔、墨色层次多，而且磨墨的几分钟正好用来读帖、静心。</div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:18px">
+      <h4>砚台：只用墨汁可以用碟，想磨墨才需要砚</h4>
+      <div class="grid2">
+        <div>
+          <p><b>砚台的作用</b>不是“装墨”，而是提供一块细腻的石面，让墨条磨出的墨细腻、胶匀。砚堂（磨墨的平面）要平整，墨池（存墨的凹处）要够深。</p>
+          <p><b>新手怎么买：</b>几十元的罗纹砚、学生砚完全够用，不必追名砚。挑石面平整、手感细腻、盖子能盖严的；带盖能防墨干、防尘。</p>
+          <p><b>只用墨汁：</b>白瓷碟、小墨碟更好洗，不吸墨、不心疼，没必要为墨汁专门买砚。</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>砚种</th><th>产地</th><th>特点</th></tr></thead>
+            <tbody>
+              <tr><td><b>端砚</b></td><td>广东肇庆</td><td>石质细腻，发墨细、下墨稍慢，墨色好</td></tr>
+              <tr><td><b>歙砚</b></td><td>安徽歙县、江西婺源</td><td>下墨快、墨色浓，锋芒感强</td></tr>
+              <tr><td><b>洮河</b></td><td>甘肃</td><td>石质温润，发墨匀，产量少</td></tr>
+              <tr><td><b>澄泥</b></td><td>山西等地</td><td>陶制非石，轻、细，性价比高</td></tr>
+              <tr><td><b>罗纹</b></td><td>江西婺源</td><td>入门学生砚，几十元，练手够用</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tip"><b>砚台保养：</b>用完立刻用清水和软布洗净，不留宿墨；不用热水烫、不暴晒、不摔碰；长期不用擦干后收进盒子，盖严防裂。</div>
+    </div>
+
+    <div class="panel" style="margin-top:18px">
+      <h4>墨分五色：同一支笔，靠水和速度写出层次</h4>
+      <div class="ink-scale">
+        <div class="sw" style="background:#0b0a09;color:#efe9dd"><strong>焦</strong><small>几乎不兑水<br>提神、点睛</small></div>
+        <div class="sw" style="background:#1c1815;color:#efe9dd"><strong>浓</strong><small>日常书写<br>楷隶最常用</small></div>
+        <div class="sw" style="background:#3b342b;color:#efe9dd"><strong>重</strong><small>稍加水<br>厚重润泽</small></div>
+        <div class="sw" style="background:#776b5a;color:#fbf7ee"><strong>淡</strong><small>多加水<br>行草、远山</small></div>
+        <div class="sw" style="background:#b3a58f;color:#2a251d"><strong>清</strong><small>水多于墨<br>通透、留白</small></div>
+      </div>
+      <div class="grid3" style="margin-top:16px">
+        <p style="font-size:13px"><b>调墨：</b>先倒浓墨，笔尖蘸水再入墨，比直接把水倒进墨里更好控制。</p>
+        <p style="font-size:13px"><b>用墨：</b>蘸一次墨不要写太多字，行笔到“墨尽笔涩”时正好换气，字才有节奏。</p>
+        <p style="font-size:13px"><b>常见问题：</b>墨发臭可滴一小滴白酒；墨太黏可加几滴水；写完一定洗笔洗砚。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04 PAPER ================= -->
+  <section id="paper" class="sec">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2>宣纸：生、熟、半生熟，差别就在“洇不洇”</h2>
+      <span class="en">Xuan Paper</span>
+    </div>
+    <p class="sec-note">宣纸的“生熟”，说的是<b>有没有上过明矾和胶</b>。上过矾，纸面被封闭，墨不往里渗，就是熟宣；没上过，墨会顺着纤维洇开，就是生宣。</p>
+
+    <div class="grid3">
+      <div class="paper-card">
+        <h3>生宣</h3>
+        <div class="sub">RAW · 未上矾</div>
+        <ul class="kv">
+          <li><em>吸墨</em><span>极快，墨会向四周洇散</span></li>
+          <li><em>墨韵</em><span>层次最丰富，浓淡干湿都好看</span></li>
+          <li><em>适合</em><span>行书、草书、大写意、篆隶大字</span></li>
+          <li><em>难点</em><span>新手容易一蘸就洇成墨团</span></li>
+        </ul>
+        <div class="meter">控制难度
+          <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+        </div>
+      </div>
+
+      <div class="paper-card rec">
+        <span class="tag">新手推荐</span>
+        <h3>半生熟</h3>
+        <div class="sub">SEMI-SIZED · 煮锤 / 扎花 / 蝉衣</div>
+        <ul class="kv">
+          <li><em>吸墨</em><span>适中，轻微洇散</span></li>
+          <li><em>墨韵</em><span>兼顾润泽与清晰，容错高</span></li>
+          <li><em>适合</em><span>楷书、行书、隶书、日常创作</span></li>
+          <li><em>建议</em><span>入门第一刀纸就买它</span></li>
+        </ul>
+        <div class="meter">控制难度
+          <div class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+
+      <div class="paper-card">
+        <h3>熟宣</h3>
+        <div class="sub">SIZED · 上过明矾 / 骨胶</div>
+        <ul class="kv">
+          <li><em>吸墨</em><span>几乎不吸，墨停在纸面</span></li>
+          <li><em>墨韵</em><span>干净锐利，适合精细刻画</span></li>
+          <li><em>适合</em><span>小楷、工笔、抄经、瘦金体</span></li>
+          <li><em>注意</em><span>久放会“漏矾”，买来尽快用</span></li>
+        </ul>
+        <div class="meter">控制难度
+          <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:18px">
+      <div class="panel">
+        <h4>常见纸种，各自干什么用</h4>
+        <div class="table-wrap" style="margin-top:10px">
+          <table>
+            <thead><tr><th>纸种</th><th>性格</th><th>适合</th></tr></thead>
+            <tbody>
+              <tr><td><b>毛边纸</b></td><td>竹浆，微黄，便宜，略带涩感</td><td>日课练习，写废不心疼</td></tr>
+              <tr><td><b>元书纸</b></td><td>薄、吸水快、价格低</td><td>小字、大量练习</td></tr>
+              <tr><td><b>特净皮宣</b></td><td>檀皮多，韧、润、耐皴擦</td><td>作品创作、行草</td></tr>
+              <tr><td><b>棉料宣</b></td><td>稻草多，便宜，洇得厉害</td><td>大字练习、写意</td></tr>
+              <tr><td><b>绢</b></td><td>丝织，细腻不洇</td><td>小楷、工笔、抄经</td></tr>
+              <tr><td><b>水写布</b></td><td>清水显影，干了即消</td><td>只练结构，不练笔法墨法</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h4>规格与裁法：买纸先看这一栏</h4>
+        <div class="table-wrap" style="margin-top:10px">
+          <table>
+            <thead><tr><th>规格</th><th>尺寸（cm）</th><th>常见用途</th></tr></thead>
+            <tbody>
+              <tr><td><b>三尺整张</b></td><td>55 × 100</td><td>小条幅、练习</td></tr>
+              <tr><td><b>四尺整张</b></td><td>69 × 138</td><td>中堂、整幅创作</td></tr>
+              <tr><td><b>四尺对开</b></td><td>34 × 138</td><td>条幅、对联</td></tr>
+              <tr><td><b>四尺斗方</b></td><td>69 × 69</td><td>单字、少字作品</td></tr>
+              <tr><td><b>四尺三开</b></td><td>46 × 69</td><td>练习、小作品</td></tr>
+              <tr><td><b>六尺整张</b></td><td>97 × 180</td><td>大字、展厅作品</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tip"><b>市制换算：</b>一尺约 33.3 cm，所以“四尺”约 138 cm。买纸时按“整张 / 对开 / 三开”裁，比按厘米买更方便。</div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:18px">
+      <h4>用纸的五个小细节</h4>
+      <div class="grid3">
+        <p><b>① 认正面</b><br>宣纸有一面较光滑、一面略涩。光滑面朝上，洇墨更均匀；拿不准就两面各试一笔。</p>
+        <p><b>② 垫毛毡</b><br>桌上铺书法毛毡，纸才吃得住墨、不粘桌，写大字也不跑纸。</p>
+        <p><b>③ 纸要铺平</b><br>用镇纸压住两端，皱褶会让笔画变形，也会积墨。</p>
+        <p><b>④ 生宣配浓墨</b><br>淡墨上生宣容易糊成一片；熟宣则相反，太浓会浮在表面、发亮。</p>
+        <p><b>⑤ 先小后大</b><br>练习从 30–40 cm 的裁片开始，别一上来就铺四尺整张，压力和浪费都大。</p>
+        <p><b>⑥ 新纸去火气</b><br>新宣纸略“燥”，拆开透气放几天，或用手抚一遍，写起来更顺。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 PLAN ================= -->
+  <section id="plan" class="sec">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2>练习计划：7 天上手，30 天能自己走</h2>
+      <span class="en">Practice Plan</span>
+    </div>
+    <p class="sec-note">计划按每天 30–40 分钟设计。纸用毛边纸或半生熟，墨汁兑水到“挂笔不滴、行笔不滞”即可。30 天不会让你“学会书法”，但足够让你知道下一步该练什么，也让手和笔先熟起来。</p>
+
+    <div class="panel">
+      <h4>每天 30 分钟怎么分</h4>
+      <div class="daybar">
+        <div class="b1">读帖 5′</div>
+        <div class="b2">热身 5′</div>
+        <div class="b3">临帖 15′</div>
+        <div class="b4">复盘 5′</div>
+      </div>
+      <p style="font-size:12.5px;color:#8c806c;margin-top:10px">读帖看结构、重心、起收笔；热身写中锋横竖、画圈；临帖只对临 3–5 个字；复盘圈出最像和最不像的字，第二天先改它。</p>
+    </div>
+
+    <h3 class="plan-sub">7 天 · 先把手感建立起来</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th style="width:64px">天</th><th>练什么</th><th style="width:230px">重点</th><th style="width:92px">时长</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>D1</b></td><td>开笔、执笔、坐姿；中锋横线 20 遍</td><td>指实掌虚，笔杆基本垂直</td><td>30 分钟</td></tr>
+          <tr><td><b>D2</b></td><td>中锋竖线；顺时针、逆时针画圈各 5 圈</td><td>手腕稳，速度匀，别越写越快</td><td>30 分钟</td></tr>
+          <tr><td><b>D3</b></td><td>《峄山碑》横、竖、弧线各 10 遍</td><td>中锋铺毫，转折处圆转不断</td><td>40 分钟</td></tr>
+          <tr><td><b>D4</b></td><td>《曹全碑》选 3 个字，读帖后对临</td><td>蚕头燕尾，一波三折</td><td>40 分钟</td></tr>
+          <tr><td><b>D5</b></td><td>《颜勤礼碑》横、竖、撇、捺各 20 遍</td><td>起收笔清楚，提按分明</td><td>40 分钟</td></tr>
+          <tr><td><b>D6</b></td><td>独体字 5 个：大、人、山、水、中</td><td>重心、比例、主笔</td><td>40 分钟</td></tr>
+          <tr><td><b>D7</b></td><td>复盘：挑 3 张对比，定主攻字帖和固定练习时间</td><td>找问题，不贪多</td><td>30 分钟</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="plan-sub">30 天 · 按周推进</h3>
+    <div class="grid4">
+      <div class="week">
+        <span class="wk">WEEK 1 · D1–7</span>
+        <h3>起手：工具与线条</h3>
+        <p>开笔、执笔、坐姿；中锋横竖与画圈；用《峄山碑》练篆书线条。</p>
+        <div class="goal"><b>目标：</b>线条不抖，笔尖听使唤<br><b>产出：</b>1 张线条练习</div>
+      </div>
+      <div class="week">
+        <span class="wk">WEEK 2 · D8–14</span>
+        <h3>隶书：学会提按</h3>
+        <p>《曹全碑》基本笔画，选 10 个结构简单的字对临，先求准，再求快。</p>
+        <div class="goal"><b>目标：</b>写出蚕头燕尾<br><b>产出：</b>10 字对临</div>
+      </div>
+      <div class="week">
+        <span class="wk">WEEK 3 · D15–21</span>
+        <h3>楷书：把字写站住</h3>
+        <p>《颜勤礼碑》基本笔画 + 20 个字，重点看重心、比例和部件避让。</p>
+        <div class="goal"><b>目标：</b>结构端正，重心不歪<br><b>产出：</b>1 张 20 字作业</div>
+      </div>
+      <div class="week">
+        <span class="wk">WEEK 4 · D22–30</span>
+        <h3>集字：完成第一张作品</h3>
+        <p>从临过的字里集 4–8 个字，写成斗方或条幅，加落款、钤印，完整走一遍。</p>
+        <div class="goal"><b>目标：</b>独立完成一张作品<br><b>产出：</b>作品 1 张 + 复盘</div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:18px">
+      <h4>30 天打卡表：写一天，涂一格</h4>
+      <div class="check30">
+        <label class="day"><input type="checkbox"><span>1</span></label>
+        <label class="day"><input type="checkbox"><span>2</span></label>
+        <label class="day"><input type="checkbox"><span>3</span></label>
+        <label class="day"><input type="checkbox"><span>4</span></label>
+        <label class="day"><input type="checkbox"><span>5</span></label>
+        <label class="day"><input type="checkbox"><span>6</span></label>
+        <label class="day"><input type="checkbox"><span>7</span></label>
+        <label class="day"><input type="checkbox"><span>8</span></label>
+        <label class="day"><input type="checkbox"><span>9</span></label>
+        <label class="day"><input type="checkbox"><span>10</span></label>
+        <label class="day"><input type="checkbox"><span>11</span></label>
+        <label class="day"><input type="checkbox"><span>12</span></label>
+        <label class="day"><input type="checkbox"><span>13</span></label>
+        <label class="day"><input type="checkbox"><span>14</span></label>
+        <label class="day"><input type="checkbox"><span>15</span></label>
+        <label class="day"><input type="checkbox"><span>16</span></label>
+        <label class="day"><input type="checkbox"><span>17</span></label>
+        <label class="day"><input type="checkbox"><span>18</span></label>
+        <label class="day"><input type="checkbox"><span>19</span></label>
+        <label class="day"><input type="checkbox"><span>20</span></label>
+        <label class="day"><input type="checkbox"><span>21</span></label>
+        <label class="day"><input type="checkbox"><span>22</span></label>
+        <label class="day"><input type="checkbox"><span>23</span></label>
+        <label class="day"><input type="checkbox"><span>24</span></label>
+        <label class="day"><input type="checkbox"><span>25</span></label>
+        <label class="day"><input type="checkbox"><span>26</span></label>
+        <label class="day"><input type="checkbox"><span>27</span></label>
+        <label class="day"><input type="checkbox"><span>28</span></label>
+        <label class="day"><input type="checkbox"><span>29</span></label>
+        <label class="day"><input type="checkbox"><span>30</span></label>
+      </div>
+      <div class="legend">
+        <span><i style="background:#b23a2f"></i>第 1 周 · 线条</span>
+        <span><i style="background:#9a6b3f"></i>第 2 周 · 隶书</span>
+        <span><i style="background:#3d5a52"></i>第 3 周 · 楷书</span>
+        <span><i style="background:#45566b"></i>第 4 周 · 作品</span>
+        <span style="margin-left:auto">点方格打卡；打印出来用笔涂也可以</span>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:18px">
+      <h4>四条练习原则，比计划本身更重要</h4>
+      <div class="grid2">
+        <p><b>① 少而精</b><br>一天 3–5 个字写透，好过 50 个字抄完。每个字都带着一个要改的问题写。</p>
+        <p><b>② 对临 → 背临 → 抄帖</b><br>先看一笔写一笔，再合上帖默写，最后才通篇抄。顺序反了，练的是手熟，不是字。</p>
+        <p><b>③ 固定时间</b><br>每天同一时段 30 分钟，比周末突击 3 小时有效。让手形成记忆。</p>
+        <p><b>④ 每周留一天</b><br>不写，去看展、翻字帖、看别人怎么写。养眼也是练字的一部分。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PITFALLS ================= -->
+  <section id="pit" class="sec">
+    <div class="sec-head">
+      <span class="num">06</span>
+      <h2>避坑清单：新手最常踩的七个坑</h2>
+      <span class="en">Common Mistakes</span>
+    </div>
+    <div class="pits">
+      <div class="pit"><span class="x">✕</span><div><b>一上来就写狂草</b><span>结构和笔法都没过关，写出来只是“连笔乱画”。先楷或先篆，把线条和结构练住。</span></div></div>
+      <div class="pit"><span class="x">✕</span><div><b>迷信贵笔</b><span>几十元的兼毫中楷足够练一年。笔好不好，看的是顺不顺手，不是价格标签。</span></div></div>
+      <div class="pit"><span class="x">✕</span><div><b>拿笔直接蘸墨汁瓶</b><span>水会带进瓶里，整瓶很快发臭变质。倒出来用，剩墨不回瓶。</span></div></div>
+      <div class="pit"><span class="x">✕</span><div><b>用生宣练楷书</b><span>一笔下去洇成团，越写越挫败。练习用毛边纸或半生熟，创作再上生宣。</span></div></div>
+      <div class="pit"><span class="x">✕</span><div><b>只抄帖，不读帖</b><span>临帖不是抄字数。下笔前先看结构、重心、起收笔，写一个字对照一次。</span></div></div>
+      <div class="pit"><span class="x">✕</span><div><b>只求数量，不改问题</b><span>一个字写十遍，不如每遍改一个毛病。写完挑三个最像的字，其余找差距。</span></div></div>
+      <div class="pit"><span class="x">✕</span><div><b>写完不洗笔</b><span>墨干在笔根，笔毛会硬、会断、会分叉。洗笔两分钟，能多用两年。</span></div></div>
+    </div>
+
+    <div class="panel" style="margin-top:18px">
+      <h4>最后：一张纸的入门配置单</h4>
+      <div class="table-wrap" style="margin-top:10px">
+        <table>
+          <thead><tr><th style="width:120px">类别</th><th>买什么</th><th style="width:150px">预算参考</th></tr></thead>
+          <tbody>
+            <tr><td><b>笔</b></td><td>兼毫中楷 1 支 + 兼毫大楷 1 支（可选狼毫小楷 1 支）</td><td>80–200 元</td></tr>
+            <tr><td><b>墨</b></td><td>一得阁或玄宗墨汁 1 瓶（250 g 左右）</td><td>20–60 元</td></tr>
+            <tr><td><b>纸</b></td><td>毛边纸 1 刀（练习）+ 半生熟宣纸 1 刀（创作）</td><td>60–150 元</td></tr>
+            <tr><td><b>砚</b></td><td>小罗纹砚或陶瓷墨碟 1 个</td><td>15–50 元</td></tr>
+            <tr><td><b>其他</b></td><td>毛毡 1 张、镇纸 1 对、笔帘或笔架</td><td>50–100 元</td></tr>
+            <tr><td><b>帖</b></td><td>《颜勤礼碑》或《曹全碑》高清影印本 1 本</td><td>30–60 元</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip" style="margin-top:14px"><b>总计 300 元以内</b>可以配齐一套能写半年的装备。剩下的，交给每天那半小时。</div>
+    </div>
+
+    <div class="panel" style="margin-top:18px">
+      <h4>写完之后：让这件事继续下去</h4>
+      <div class="grid3">
+        <p><b>每周留一张完整的</b><br>不必是作品，写满一张纸、落款、写日期。三个月后回看，进步会非常明显。</p>
+        <p><b>三个月回看第一张</b><br>把第一天写的字留着。它不是黑历史，是你判断自己有没有走对路的标尺。</p>
+        <p><b>找人看一眼</b><br>老师、同好、书法群都行。自己看不出的毛病，别人一眼就能指出来。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>书法入门 · 一张图看懂笔、墨、纸、砚、帖</span>
+    <span>临帖建议以原碑拓本为准 · 本文供入门参考</span>
+  </footer>
+</div>
+
+<script>
+  (function(){
+    var bar = document.getElementById('progress');
+    function onScroll(){
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    }
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    function jump(el){
+      var t = document.querySelector(el.getAttribute('data-target'));
+      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    document.querySelectorAll('.branch').forEach(function(b){
+      b.addEventListener('click', function(){ jump(b); });
+      b.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); jump(b); }
+      });
+    });
+
+    var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]')).filter(function(a){
+      return a.getAttribute('href').length > 1;
+    });
+    var secs = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+    function spy(){
+      var y = window.scrollY + 96;
+      var current = secs[0];
+      secs.forEach(function(s){
+        if (s.getBoundingClientRect().top + window.scrollY <= y) current = s;
+      });
+      links.forEach(function(a){
+        a.classList.toggle('active', !!current && a.getAttribute('href') === '#' + current.id);
+      });
+    }
+    document.addEventListener('scroll', spy, { passive: true });
+    window.addEventListener('hashchange', spy);
+    spy();
+  })();
+</script>
+</body>
+</html>
